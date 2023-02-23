@@ -101,7 +101,4 @@ const urls = [
   align-items: center;
   margin: 20rpx;
 }
-.content {
-  padding: 32rpx 32rpx 320rpx;
-}
 </style>
