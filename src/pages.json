@@ -7,6 +7,12 @@
       }
     },
     {
+      "path": "pages/avatar/index",
+      "style": {
+        "navigationBarTitleText": "avatar"
+      }
+    },
+    {
       "path": "pages/button/index",
       "style": {
         "navigationBarTitleText": "button"

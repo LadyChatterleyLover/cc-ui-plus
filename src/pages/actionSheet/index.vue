@@ -148,8 +148,6 @@ const show6 = ref<boolean>(false)
 const show7 = ref<boolean>(false)
 const show8 = ref<boolean>(false)
 const show9 = ref<boolean>(false)
-const show10 = ref<boolean>(false)
-const show11 = ref<boolean>(false)
 
 const open1 = () => {
   show1.value = true

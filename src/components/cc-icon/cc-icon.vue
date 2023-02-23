@@ -23,7 +23,7 @@ import iconList from './icons'
 
 const getVal = (val: number | string) => {
   const reg = /^[0-9]*$/g
-  return typeof val === 'number' || reg.test(val) ? `${val}px` : val
+  return typeof val === 'number' || reg.test(val) ? `${val}` : val
 }
 
 const props = withDefaults(
