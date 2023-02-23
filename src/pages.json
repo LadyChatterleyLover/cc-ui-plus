@@ -1,10 +1,177 @@
 {
   "pages": [
-    //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
     {
       "path": "pages/index/index",
       "style": {
-        "navigationBarTitleText": "uni-app"
+        "navigationBarTitleText": "cc-ui"
+      }
+    },
+    {
+      "path": "pages/button/index",
+      "style": {
+        "navigationBarTitleText": "button"
+      }
+    },
+    {
+      "path": "pages/cell/index",
+      "style": {
+        "navigationBarTitleText": "cell"
+      }
+    },
+    {
+      "path": "pages/layout/index",
+      "style": {
+        "navigationBarTitleText": "layout"
+      }
+    },
+    {
+      "path": "pages/popup/index",
+      "style": {
+        "navigationBarTitleText": "popup"
+      }
+    },
+    {
+      "path": "pages/overlay/index",
+      "style": {
+        "navigationBarTitleText": "overlay"
+      }
+    },
+    {
+      "path": "pages/tag/index",
+      "style": {
+        "navigationBarTitleText": "tag"
+      }
+    },
+    {
+      "path": "pages/toast/index",
+      "style": {
+        "navigationBarTitleText": "toast"
+      }
+    },
+    {
+      "path": "pages/actionSheet/index",
+      "style": {
+        "navigationBarTitleText": "actionSheet"
+      }
+    },
+    {
+      "path": "pages/modal/index",
+      "style": {
+        "navigationBarTitleText": "modal"
+      }
+    },
+    {
+      "path": "pages/openMore/index",
+      "style": {
+        "navigationBarTitleText": "openMore"
+      }
+    },
+    {
+      "path": "pages/divider/index",
+      "style": {
+        "navigationBarTitleText": "divider"
+      }
+    },
+    {
+      "path": "pages/loadMore/index",
+      "style": {
+        "navigationBarTitleText": "loadMore"
+      }
+    },
+    {
+      "path": "pages/loading/index",
+      "style": {
+        "navigationBarTitleText": "loading"
+      }
+    },
+    {
+      "path": "pages/gap/index",
+      "style": {
+        "navigationBarTitleText": "gap"
+      }
+    },
+    {
+      "path": "pages/link/index",
+      "style": {
+        "navigationBarTitleText": "link"
+      }
+    },
+    {
+      "path": "pages/countDown/index",
+      "style": {
+        "navigationBarTitleText": "countDown"
+      }
+    },
+    {
+      "path": "pages/countup/index",
+      "style": {
+        "navigationBarTitleText": "countup"
+      }
+    },
+    {
+      "path": "pages/timeLine/index",
+      "style": {
+        "navigationBarTitleText": "timeLine"
+      }
+    },
+    {
+      "path": "pages/subsection/index",
+      "style": {
+        "navigationBarTitleText": "subsection"
+      }
+    },
+    {
+      "path": "pages/checkbox/index",
+      "style": {
+        "navigationBarTitleText": "checkbox"
+      }
+    },
+    {
+      "path": "pages/radio/index",
+      "style": {
+        "navigationBarTitleText": "radio"
+      }
+    },
+    {
+      "path": "pages/switch/index",
+      "style": {
+        "navigationBarTitleText": "switch"
+      }
+    },
+    {
+      "path": "pages/checker/index",
+      "style": {
+        "navigationBarTitleText": "checker"
+      }
+    },
+    {
+      "path": "pages/slider/index",
+      "style": {
+        "navigationBarTitleText": "slider"
+      }
+    },
+    {
+      "path": "pages/rate/index",
+      "style": {
+        "navigationBarTitleText": "rate"
+      }
+    },
+    {
+      "path": "pages/stepper/index",
+      "style": {
+        "navigationBarTitleText": "stepper"
+      }
+    },
+    {
+      "path": "pages/badge/index",
+      "style": {
+        "navigationBarTitleText": "badge"
+      }
+    },
+    {
+      "path": "pages/notifyBar/index",
+      "style": {
+        "navigationBarTitleText": "notifyBar"
       }
     }
   ],
