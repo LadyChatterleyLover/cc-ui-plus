@@ -62,7 +62,7 @@
 </template>
 
 <script setup lang="ts">
-import { nextTick, onMounted, ref, watch } from 'vue'
+import { getCurrentInstance, nextTick, onMounted, ref, watch } from 'vue'
 import cloneDeep from 'lodash-es/cloneDeep'
 
 export interface CollapseItem {
@@ -85,6 +85,7 @@ export interface CollapseItem {
   contentSlot?: string
 }
 
+const instance = getCurrentInstance()
 const props = withDefaults(
   defineProps<{
     list: CollapseItem[]
@@ -153,7 +154,7 @@ const clickItem = (item: CollapseItem, index: number) => {
     nextTick(() => {
       uni
         .createSelectorQuery()
-        .in(this)
+        .in(instance)
         .select('.cc-collapse-item-content')
         .boundingClientRect()
         .exec((res) => {
@@ -180,7 +181,7 @@ watch(
         nextTick(() => {
           uni
             .createSelectorQuery()
-            .in(this)
+            .in(instance)
             .select('.cc-collapse-item-content')
             .boundingClientRect()
             .exec((res) => {
