@@ -185,11 +185,6 @@ const list: ListItem[] = [
         url: '/pages/overlay/index',
       },
       {
-        title: 'PullRefresh',
-        label: '下拉刷新',
-        url: '/pages/pullRefresh/index',
-      },
-      {
         title: 'SwipeCell',
         label: '滑动单元格',
         url: '/pages/swipeCell/index',
@@ -198,11 +193,6 @@ const list: ListItem[] = [
         title: 'Avatar',
         label: '头像',
         url: '/pages/avatar/index',
-      },
-      {
-        title: 'Qrcode',
-        label: '生成二维码',
-        url: '/pages/qrcode/index',
       },
     ],
   },
@@ -223,16 +213,6 @@ const list: ListItem[] = [
         title: 'Collapse',
         label: '折叠面板',
         url: '/pages/collapse/index',
-      },
-      {
-        title: 'CountDown',
-        label: '倒计时',
-        url: '/pages/countDown/index',
-      },
-      {
-        title: 'Countup',
-        label: '数字滚动',
-        url: '/pages/countup/index',
       },
       {
         title: 'TimeLine',
@@ -275,11 +255,6 @@ const list: ListItem[] = [
         url: '/pages/subsection/index',
       },
       {
-        title: 'Sticky',
-        label: '粘性布局',
-        url: '/pages/sticky/index',
-      },
-      {
         title: 'Swiper',
         label: '轮播',
         url: '/pages/swiper/index',
@@ -320,19 +295,9 @@ const list: ListItem[] = [
         url: '/pages/grid/index',
       },
       {
-        title: 'IndexBar',
-        label: '索引栏',
-        url: '/pages/indexBar/index',
-      },
-      {
         title: 'NavBar',
         label: '导航栏',
         url: '/pages/navBar/index',
-      },
-      {
-        title: 'BackTop',
-        label: '回到顶部',
-        url: '/pages/backTop/index',
       },
       {
         title: 'Pagination',
@@ -348,11 +313,6 @@ const list: ListItem[] = [
         title: 'Tabs',
         label: '标签页',
         url: '/pages/tabs/index',
-      },
-      {
-        title: 'FullTabs',
-        label: '全屏选项卡',
-        url: '/pages/fullTabs/index',
       },
       {
         title: 'Tabbar',

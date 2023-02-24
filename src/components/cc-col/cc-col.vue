@@ -54,7 +54,7 @@ const style: ComputedRef<CSSProperties> = computed(() => {
   }
 })
 
-const handleClick = (e) => {
+const handleClick = (e: Event) => {
   emits('click', e)
 }
 
