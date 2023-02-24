@@ -1,7 +1,7 @@
 <template>
   <!-- #ifdef APP-NVUE -->
   <text
-    :style="{ color: color, 'font-size': Number(iconSize) / 2 + 'rpx' }"
+    :style="{ color: color, 'font-size': Number(iconSize) }"
     class="uni-icons"
     @click="handleClick"
     >{{ ccCode }}</text
@@ -9,7 +9,7 @@
   <!-- #endif -->
   <!-- #ifndef APP-NVUE -->
   <text
-    :style="{ color: color, 'font-size': Number(iconSize) / 2 + 'rpx' }"
+    :style="{ color: color, 'font-size': Number(iconSize) }"
     class="uni-icons"
     :class="['uniui-' + type, customPrefix, customPrefix ? type : '']"
     @click="handleClick"
@@ -23,7 +23,7 @@ import iconList from './icons'
 
 const getVal = (val: number | string) => {
   const reg = /^[0-9]*$/g
-  return typeof val === 'number' || reg.test(val) ? `${val}` : val
+  return typeof val === 'number' || reg.test(val) ? `${val}px` : val
 }
 
 const props = withDefaults(

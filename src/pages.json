@@ -7,6 +7,18 @@
       }
     },
     {
+      "path": "pages/search/index",
+      "style": {
+        "navigationBarTitleText": "search"
+      }
+    },
+    {
+      "path": "pages/field/index",
+      "style": {
+        "navigationBarTitleText": "field"
+      }
+    },
+    {
       "path": "pages/avatar/index",
       "style": {
         "navigationBarTitleText": "avatar"
