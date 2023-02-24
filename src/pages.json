@@ -7,6 +7,12 @@
       }
     },
     {
+      "path": "pages/steps/index",
+      "style": {
+        "navigationBarTitleText": "steps"
+      }
+    },
+    {
       "path": "pages/pagination/index",
       "style": {
         "navigationBarTitleText": "pagination"
