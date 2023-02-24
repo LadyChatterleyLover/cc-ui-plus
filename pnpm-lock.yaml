@@ -21,11 +21,12 @@ specifiers:
   '@dcloudio/uni-stacktracey': 3.0.0-alpha-3061420221216001
   '@dcloudio/vite-plugin-uni': 3.0.0-alpha-3061420221216001
   '@element-plus/eslint-config': ^0.0.20230222
-  '@types/lodash': ^4.14.191
+  '@types/lodash-es': ^4.17.6
   cz-customizable: ^7.0.0
   eslint: ^8.34.0
   husky: ^8.0.3
   lint-staged: ^13.1.2
+  lodash-es: ^4.17.21
   prettier: ^2.8.4
   pretty-quick: ^3.1.3
   sass: ^1.58.3
@@ -47,6 +48,7 @@ dependencies:
   '@dcloudio/uni-mp-toutiao': 3.0.0-alpha-3061420221216001_vue@3.2.47
   '@dcloudio/uni-mp-weixin': 3.0.0-alpha-3061420221216001_vue@3.2.47
   '@dcloudio/uni-quickapp-webview': 3.0.0-alpha-3061420221216001_vue@3.2.47
+  lodash-es: 4.17.21
   vue: 3.2.47
   vue-i18n: 9.2.2_vue@3.2.47
 
@@ -59,7 +61,7 @@ devDependencies:
   '@dcloudio/uni-stacktracey': 3.0.0-alpha-3061420221216001
   '@dcloudio/vite-plugin-uni': 3.0.0-alpha-3061420221216001_vite@4.0.3+vue@3.2.47
   '@element-plus/eslint-config': 0.0.20230222_eslint@8.34.0
-  '@types/lodash': 4.14.191
+  '@types/lodash-es': 4.17.6
   cz-customizable: 7.0.0
   eslint: 8.34.0
   husky: 8.0.3
@@ -1861,6 +1863,15 @@ packages:
       {
         integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==,
       }
+    dev: true
+
+  /@types/lodash-es/4.17.6:
+    resolution:
+      {
+        integrity: sha512-R+zTeVUKDdfoRxpAryaQNRKk3105Rrgx2CFRClIgRGaqDTdjsm8h6IYA8ir584W3ePzkZfst5xIgDwYrlh9HLg==,
+      }
+    dependencies:
+      '@types/lodash': 4.14.191
     dev: true
 
   /@types/lodash/4.14.191:
@@ -5659,6 +5670,13 @@ packages:
     dependencies:
       p-locate: 5.0.0
     dev: true
+
+  /lodash-es/4.17.21:
+    resolution:
+      {
+        integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==,
+      }
+    dev: false
 
   /lodash.camelcase/4.3.0:
     resolution:
