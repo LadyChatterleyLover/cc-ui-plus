@@ -72,7 +72,12 @@ withDefaults(
     animation: skeleton-animate 1.2s ease-in-out infinite;
   }
   &-title {
+    /* #ifdef H5 */
     width: 40%;
+    /* #endif */
+    /* #ifndef H5 */
+    width: 300rpx;
+    /* #endif */
   }
   &-wrap {
     flex: 1;
@@ -90,10 +95,20 @@ withDefaults(
     }
   }
   &-row {
+    /* #ifdef H5 */
     width: 100%;
+    /* #endif */
+    /* #ifndef H5 */
+    width: 750rpx;
+    /* #endif */
     margin-top: 40rpx;
     &-last {
+      /* #ifdef H5 */
       width: 60%;
+      /* #endif */
+      /* #ifndef H5 */
+      width: 450rpx;
+      /* #endif */
     }
   }
 }
