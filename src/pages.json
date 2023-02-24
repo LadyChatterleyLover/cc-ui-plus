@@ -7,6 +7,18 @@
       }
     },
     {
+      "path": "pages/imagePreview/index",
+      "style": {
+        "navigationBarTitleText": "imagePreview"
+      }
+    },
+    {
+      "path": "pages/swiper/index",
+      "style": {
+        "navigationBarTitleText": "swiper"
+      }
+    },
+    {
       "path": "pages/collapse/index",
       "style": {
         "navigationBarTitleText": "collapse"
