@@ -7,6 +7,18 @@
       }
     },
     {
+      "path": "pages/passwordInput/index",
+      "style": {
+        "navigationBarTitleText": "passwordInput"
+      }
+    },
+    {
+      "path": "pages/numberKeyboard/index",
+      "style": {
+        "navigationBarTitleText": "numberKeyboard"
+      }
+    },
+    {
       "path": "pages/search/index",
       "style": {
         "navigationBarTitleText": "search"
