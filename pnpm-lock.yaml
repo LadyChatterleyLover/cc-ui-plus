@@ -1449,6 +1449,15 @@ packages:
       '@types/lodash': 4.14.191
     dev: true
 
+  /@types/lodash-es/4.17.6:
+    resolution:
+      {
+        integrity: sha512-R+zTeVUKDdfoRxpAryaQNRKk3105Rrgx2CFRClIgRGaqDTdjsm8h6IYA8ir584W3ePzkZfst5xIgDwYrlh9HLg==,
+      }
+    dependencies:
+      '@types/lodash': 4.14.191
+    dev: true
+
   /@types/lodash/4.14.191:
     resolution: {integrity: sha512-BdZ5BCCvho3EIXw6wUCXHe7rS53AIDPLE+JzwgT+OsJk53oBfbSmZZ7CX4VaRoN78N+TJpFi9QPlfIVNmJYWxQ==}
     dev: true
@@ -4150,7 +4159,14 @@ packages:
     dev: true
 
   /lodash-es/4.17.21:
+<<<<<<< HEAD
     resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
+=======
+    resolution:
+      {
+        integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==,
+      }
+>>>>>>> b128b6564e2bba010bbab3e65663df85876c7ebd
     dev: false
 
   /lodash.camelcase/4.3.0:

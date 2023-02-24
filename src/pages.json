@@ -7,9 +7,93 @@
       }
     },
     {
+      "path": "pages/sidebar/index",
+      "style": {
+        "navigationBarTitleText": "sidebar"
+      }
+    },
+    {
+      "path": "pages/imagePreview/index",
+      "style": {
+        "navigationBarTitleText": "imagePreview"
+      }
+    },
+    {
+      "path": "pages/swiper/index",
+      "style": {
+        "navigationBarTitleText": "swiper"
+      }
+    },
+    {
+      "path": "pages/collapse/index",
+      "style": {
+        "navigationBarTitleText": "collapse"
+      }
+    },
+    {
+      "path": "pages/steps/index",
+      "style": {
+        "navigationBarTitleText": "steps"
+      }
+    },
+    {
+      "path": "pages/pagination/index",
+      "style": {
+        "navigationBarTitleText": "pagination"
+      }
+    },
+    {
+      "path": "pages/slideVerify/index",
+      "style": {
+        "navigationBarTitleText": "slideVerify"
+      }
+    },
+    {
+      "path": "pages/rotateVerify/index",
+      "style": {
+        "navigationBarTitleText": "rotateVerify"
+      }
+    },
+    {
+      "path": "pages/alert/index",
+      "style": {
+        "navigationBarTitleText": "alert"
+      }
+    },
+    {
+      "path": "pages/passwordInput/index",
+      "style": {
+        "navigationBarTitleText": "passwordInput"
+      }
+    },
+    {
+      "path": "pages/numberKeyboard/index",
+      "style": {
+        "navigationBarTitleText": "numberKeyboard"
+      }
+    },
+    {
+      "path": "pages/search/index",
+      "style": {
+        "navigationBarTitleText": "search"
+      }
+    },
+    {
+      "path": "pages/field/index",
+      "style": {
+        "navigationBarTitleText": "field"
+      }
+    },
+    {
       "path": "pages/avatar/index",
       "style": {
         "navigationBarTitleText": "avatar"
+      }
+    },
+    {
+      "path": "pages/skeleton/index",
+      "style": {
+        "navigationBarTitleText": "skeleton"
       }
     },
     {

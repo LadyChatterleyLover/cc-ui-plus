@@ -1,7 +1,7 @@
 <template>
   <!-- #ifdef APP-NVUE -->
   <text
-    :style="{ color: color, fontSize: iconSize }"
+    :style="{ color: color, 'font-size': Number(iconSize) }"
     class="uni-icons"
     @click="handleClick"
     >{{ ccCode }}</text
@@ -9,7 +9,7 @@
   <!-- #endif -->
   <!-- #ifndef APP-NVUE -->
   <text
-    :style="{ color: color, fontSize: iconSize }"
+    :style="{ color: color, 'font-size': Number(iconSize) }"
     class="uni-icons"
     :class="['uniui-' + type, customPrefix, customPrefix ? type : '']"
     @click="handleClick"
