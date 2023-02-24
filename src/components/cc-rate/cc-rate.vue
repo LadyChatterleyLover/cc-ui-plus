@@ -11,6 +11,7 @@
         :class="{ disabled }"
         :type="activeIcon"
         :color="disabled ? '#c8c9cc' : activeColor"
+        :size="size"
       />
     </view>
     <view
@@ -23,6 +24,7 @@
       <cc-icon
         :type="inactiveIcon"
         :color="disabled ? '#c8c9cc' : inactiveColor"
+        :size="size"
       />
     </view>
   </view>
@@ -35,6 +37,7 @@ const props = withDefaults(
     modelValue: number
     count?: number
     minCount?: number
+    size?: string | number
     activeIcon?: string
     inactiveIcon?: string
     activeColor?: string
@@ -47,6 +50,7 @@ const props = withDefaults(
   {
     count: 5,
     minCount: 0,
+    size: 16,
     activeIcon: 'star-filled',
     inactiveIcon: 'star',
     activeColor: '#ffd21e',

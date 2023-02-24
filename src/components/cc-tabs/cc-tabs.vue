@@ -1,7 +1,7 @@
 <template>
   <view class="cc-tabs cc-tabs-scroll-view">
     <scroll-view
-      scroll-x
+      :scroll-x="scrollable"
       :scroll-left="scrollLeft"
       scroll-with-animation
       @scroll="handleScroll"
@@ -15,9 +15,18 @@
         >
           <view
             class="cc-tabs-content-title"
+            :class="{ disabled: item.disabled }"
             :style="{ color: active === index ? activeColor : inactiveColor }"
-            >{{ item.name }}</view
           >
+            <cc-badge
+              v-if="item.badge || item.dot"
+              :content="item.badge"
+              :dot="item.dot"
+              style="height: 100%"
+              >{{ item.name }}</cc-badge
+            >
+            <text v-else>{{ item.name }} </text>
+          </view>
         </view>
         <view
           class="cc-tabs-content-line"
@@ -35,13 +44,14 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
+import { getCurrentInstance, onMounted, ref } from 'vue'
 export interface TabItem {
   name: string
   disabled?: boolean
   badge?: string | number
   dot?: boolean
 }
+const instance = getCurrentInstance()
 
 const props = withDefaults(
   defineProps<{
@@ -82,7 +92,7 @@ const scrollX = ref(0)
 const setPosition = () => {
   uni
     .createSelectorQuery()
-    .in(this)
+    .in(instance)
     .selectAll('.cc-tabs-content')
     .boundingClientRect()
     .exec((res) => {
@@ -96,10 +106,13 @@ const handleScroll = (val: any) => {
 }
 
 const clickItem = (item: TabItem, index: number) => {
+  if (item.disabled) {
+    return
+  }
   active.value = index
   uni
     .createSelectorQuery()
-    .in(this)
+    .in(instance)
     .selectAll('.cc-tabs-content')
     .boundingClientRect()
     .exec((res) => {
@@ -138,12 +151,15 @@ scroll-view ::v-deep ::-webkit-scrollbar {
     flex: 1;
     display: flex;
     align-items: center;
+    position: relative;
   }
   &-content {
     flex: 1 0 auto;
     display: flex;
     justify-content: center;
+    align-items: center;
     position: relative;
+    height: 88rpx;
     &-title {
       padding: 0px 20rpx;
       font-size: 12px;
@@ -151,9 +167,13 @@ scroll-view ::v-deep ::-webkit-scrollbar {
     }
     &-line {
       position: absolute;
-      bottom: 0;
+      bottom: 16rpx;
       transition-duration: 300ms;
     }
+  }
+  .disabled {
+    color: #c8c9cc !important;
+    cursor: not-allowed;
   }
 }
 </style>

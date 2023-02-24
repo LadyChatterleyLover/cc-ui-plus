@@ -4,7 +4,48 @@
       <view class="title">基础用法</view>
       <view class="item">
         <view>
-          <cc-tabs v-model="value" :list="list" />
+          <cc-tabs v-model="value" :list="list1" />
+        </view>
+      </view>
+    </view>
+
+    <view>
+      <view class="title">禁用选项</view>
+      <view class="item">
+        <view>
+          <cc-tabs v-model="value" :list="list2" />
+        </view>
+      </view>
+    </view>
+
+    <view>
+      <view class="title">徽标</view>
+      <view class="item">
+        <view>
+          <cc-tabs v-model="value" :list="list3" />
+        </view>
+      </view>
+    </view>
+
+    <view>
+      <view class="title">禁止滚动</view>
+      <view class="item">
+        <view>
+          <cc-tabs v-model="value" :list="list1" :scrollable="false" />
+        </view>
+      </view>
+    </view>
+
+    <view>
+      <view class="title">自定义样式</view>
+      <view class="item">
+        <view>
+          <cc-tabs
+            v-model="value"
+            :list="list1"
+            line-color="#3c9cff"
+            active-color="#f56c6c"
+          />
         </view>
       </view>
     </view>
@@ -15,7 +56,7 @@
 import { ref } from 'vue'
 
 const value = ref('1')
-const list = [
+const list1 = [
   {
     name: '关注',
   },
@@ -30,6 +71,68 @@ const list = [
   },
   {
     name: '音乐',
+  },
+  {
+    name: '美食',
+  },
+  {
+    name: '文化',
+  },
+  {
+    name: '财经',
+  },
+  {
+    name: '手工',
+  },
+]
+const list2 = [
+  {
+    name: '关注',
+  },
+  {
+    name: '推荐',
+  },
+  {
+    name: '电影',
+    disabled: true,
+  },
+  {
+    name: '科技',
+  },
+  {
+    name: '音乐',
+    disabled: true,
+  },
+  {
+    name: '美食',
+  },
+  {
+    name: '文化',
+  },
+  {
+    name: '财经',
+  },
+  {
+    name: '手工',
+  },
+]
+const list3 = [
+  {
+    name: '关注',
+  },
+  {
+    name: '推荐',
+  },
+  {
+    name: '电影',
+    dot: true,
+  },
+  {
+    name: '科技',
+  },
+  {
+    name: '音乐',
+    badge: 5,
   },
   {
     name: '美食',

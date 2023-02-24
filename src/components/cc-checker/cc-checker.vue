@@ -66,7 +66,7 @@
 
 <script setup lang="ts">
 import { defineEmits, defineProps, onMounted, ref } from 'vue'
-import cloneDeep from 'lodash/cloneDeep'
+import cloneDeep from 'lodash-es/cloneDeep'
 export interface CheckerItem {
   label: string
   value: string | number | boolean
