@@ -7,6 +7,24 @@
       }
     },
     {
+      "path": "pages/slideVerify/index",
+      "style": {
+        "navigationBarTitleText": "slideVerify"
+      }
+    },
+    {
+      "path": "pages/rotateVerify/index",
+      "style": {
+        "navigationBarTitleText": "rotateVerify"
+      }
+    },
+    {
+      "path": "pages/alert/index",
+      "style": {
+        "navigationBarTitleText": "alert"
+      }
+    },
+    {
       "path": "pages/passwordInput/index",
       "style": {
         "navigationBarTitleText": "passwordInput"
