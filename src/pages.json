@@ -7,6 +7,12 @@
       }
     },
     {
+      "path": "pages/grid/index",
+      "style": {
+        "navigationBarTitleText": "grid"
+      }
+    },
+    {
       "path": "pages/navBar/index",
       "style": {
         "navigationBarTitleText": "navBar"
