@@ -7,6 +7,12 @@
       }
     },
     {
+      "path": "pages/sidebar/index",
+      "style": {
+        "navigationBarTitleText": "sidebar"
+      }
+    },
+    {
       "path": "pages/imagePreview/index",
       "style": {
         "navigationBarTitleText": "imagePreview"
