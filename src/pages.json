@@ -7,6 +7,12 @@
       }
     },
     {
+      "path": "pages/circleProgress/index",
+      "style": {
+        "navigationBarTitleText": "circleProgress"
+      }
+    },
+    {
       "path": "pages/sidebar/index",
       "style": {
         "navigationBarTitleText": "sidebar"
