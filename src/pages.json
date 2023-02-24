@@ -13,6 +13,12 @@
       }
     },
     {
+      "path": "pages/skeleton/index",
+      "style": {
+        "navigationBarTitleText": "skeleton"
+      }
+    },
+    {
       "path": "pages/tabs/index",
       "style": {
         "navigationBarTitleText": "tabs"
