@@ -7,6 +7,12 @@
       }
     },
     {
+      "path": "pages/goodsCard/index",
+      "style": {
+        "navigationBarTitleText": "goodsCard"
+      }
+    },
+    {
       "path": "pages/addressList/index",
       "style": {
         "navigationBarTitleText": "addressList"
