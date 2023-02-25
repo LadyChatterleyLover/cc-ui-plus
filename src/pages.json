@@ -7,6 +7,12 @@
       }
     },
     {
+      "path": "pages/calendar/index",
+      "style": {
+        "navigationBarTitleText": "calendar"
+      }
+    },
+    {
       "path": "pages/upload/index",
       "style": {
         "navigationBarTitleText": "upload"
