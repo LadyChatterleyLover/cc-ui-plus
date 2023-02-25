@@ -7,6 +7,12 @@
       }
     },
     {
+      "path": "pages/dropdown/index",
+      "style": {
+        "navigationBarTitleText": "dropdown"
+      }
+    },
+    {
       "path": "pages/grid/index",
       "style": {
         "navigationBarTitleText": "grid"
