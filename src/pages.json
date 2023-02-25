@@ -19,6 +19,12 @@
       }
     },
     {
+      "path": "pages/goodsAction/index",
+      "style": {
+        "navigationBarTitleText": "goodsAction"
+      }
+    },
+    {
       "path": "pages/goodsCard/index",
       "style": {
         "navigationBarTitleText": "goodsCard"
