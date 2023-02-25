@@ -7,6 +7,12 @@
       }
     },
     {
+      "path": "pages/submitBar/index",
+      "style": {
+        "navigationBarTitleText": "submitBar"
+      }
+    },
+    {
       "path": "pages/contactCard/index",
       "style": {
         "navigationBarTitleText": "contactCard"
