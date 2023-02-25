@@ -33,7 +33,7 @@ const props = withDefaults(
 const emits = defineEmits(['update:modelValue', 'change'])
 
 const checked = ref([])
-const childNameList = ref([])
+const childNameList = ref<any[]>([])
 
 provide('checkboxGroupProps', reactive(props))
 
@@ -62,9 +62,10 @@ const setChecked = (name: any) => {
   checked.value = name
 }
 
+provide('ccRadioGroupAddChildName', addChildName)
+provide('ccRadioGroupSetChecked', setChecked)
+
 defineExpose({
-  setChecked,
-  addChildName,
   modelValue: props.modelValue,
 })
 </script>

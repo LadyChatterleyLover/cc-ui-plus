@@ -44,7 +44,7 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, getCurrentInstance, ref, watch } from 'vue'
+import { computed, getCurrentInstance, inject, ref, watch } from 'vue'
 
 const instance = getCurrentInstance()
 let parent: any = null
@@ -57,7 +57,7 @@ parent = instance!.parent
 
 const props = withDefaults(
   defineProps<{
-    modelValue?: boolean
+    modelValue?: boolean | string | number
     shape?: 'round' | 'square'
     name: any
     disabled?: boolean
@@ -77,23 +77,25 @@ const props = withDefaults(
   }
 )
 const emits = defineEmits(['update:modelValue'])
+const addChildName = inject<any>('ccRadioGroupAddChildName', undefined)
+const setChecked = inject<any>('ccRadioGroupSetChecked', undefined)
 
 const groupProps = parent.props
 
-const checked = ref(false)
+const checked = ref<boolean | string | number>(false)
 
 const change = () => {
   if (props.labelDisabled || props.disabled) {
     return
   }
-  parent.exposed.setChecked(props.name)
+  setChecked?.(props.name)
 }
 
 const clickIcon = () => {
   if (props.disabled) {
     return
   }
-  parent.exposed.setChecked(props.name)
+  setChecked?.(props.name)
 }
 
 const computedIconSize = computed(() => {
@@ -132,7 +134,7 @@ watch(
   () => props.name,
   (val) => {
     if (val) {
-      parent.exposed.addChildName(val)
+      addChildName?.(val)
     }
   },
   { immediate: true }
