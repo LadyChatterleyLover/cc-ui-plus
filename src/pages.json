@@ -7,6 +7,12 @@
       }
     },
     {
+      "path": "pages/scrollBar/index",
+      "style": {
+        "navigationBarTitleText": "scrollBar"
+      }
+    },
+    {
       "path": "pages/area/index",
       "style": {
         "navigationBarTitleText": "area"
