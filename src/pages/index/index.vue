@@ -391,26 +391,6 @@ const list: ListItem[] = [
       },
     ],
   },
-  {
-    title: '项目模板',
-    item: [
-      {
-        title: 'ScrollBar',
-        label: '滚动导航(左右联动)',
-        url: '/pages/scrollBarLinkage/index',
-      },
-      {
-        title: 'ScrollBar',
-        label: '滚动导航(左右独立)',
-        url: '/pages/scrollBar/index',
-      },
-      {
-        title: 'ChooseCity',
-        label: '城市选择',
-        url: '/pages/chooseCity/index',
-      },
-    ],
-  },
 ]
 const clickItem = (item: Item) => {
   uni.navigateTo({
