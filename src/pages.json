@@ -7,6 +7,12 @@
       }
     },
     {
+      "path": "pages/fab/index",
+      "style": {
+        "navigationBarTitleText": "fab"
+      }
+    },
+    {
       "path": "pages/calendar/index",
       "style": {
         "navigationBarTitleText": "calendar"
