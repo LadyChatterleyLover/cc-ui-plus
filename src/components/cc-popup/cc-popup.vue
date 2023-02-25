@@ -24,7 +24,7 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref, watch } from 'vue'
+import { onMounted, provide, ref, watch } from 'vue'
 
 export type Mode = '' | 'left' | 'right' | 'top' | 'bottom'
 
@@ -70,6 +70,11 @@ onMounted(() => {
   })
 })
 
+provide('cc-popup-close', close)
+
+defineExpose({
+  close,
+})
 watch(
   () => props.modelValue,
   (val) => {

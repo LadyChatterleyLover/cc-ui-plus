@@ -7,6 +7,12 @@
       }
     },
     {
+      "path": "pages/coupon/index",
+      "style": {
+        "navigationBarTitleText": "coupon"
+      }
+    },
+    {
       "path": "pages/submitBar/index",
       "style": {
         "navigationBarTitleText": "submitBar"
