@@ -7,6 +7,12 @@
       }
     },
     {
+      "path": "pages/treeSelect/index",
+      "style": {
+        "navigationBarTitleText": "treeSelect"
+      }
+    },
+    {
       "path": "pages/dropdown/index",
       "style": {
         "navigationBarTitleText": "dropdown"
