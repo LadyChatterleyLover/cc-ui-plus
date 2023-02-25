@@ -7,6 +7,12 @@
       }
     },
     {
+      "path": "pages/upload/index",
+      "style": {
+        "navigationBarTitleText": "upload"
+      }
+    },
+    {
       "path": "pages/scrollBar/index",
       "style": {
         "navigationBarTitleText": "scrollBar"
