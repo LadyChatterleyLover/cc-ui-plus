@@ -7,6 +7,12 @@
       }
     },
     {
+      "path": "pages/area/index",
+      "style": {
+        "navigationBarTitleText": "area"
+      }
+    },
+    {
       "path": "pages/coupon/index",
       "style": {
         "navigationBarTitleText": "coupon"
