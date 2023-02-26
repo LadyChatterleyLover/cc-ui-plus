@@ -27,6 +27,7 @@
         active-color="#323233"
         inactive-color="#646566"
         :line-color="lineColor"
+        :scrollable="false"
         @change="changeTab"
       >
         <view class="cc-coupon-list-content">
@@ -126,7 +127,6 @@
 
 <script setup lang="ts">
 import { computed, inject, onMounted, ref } from 'vue'
-import dayjs from 'dayjs'
 import cloneDeep from 'lodash-es/cloneDeep'
 import type { CouponItem } from '../cc-coupon-cell/cc-coupon-cell.vue'
 
@@ -184,6 +184,23 @@ const cloneCoupons = ref<CouponItem[]>([])
 const cloneDisableCoupons = ref<CouponItem[]>([])
 const currentValue = ref<number>(props.chosenCoupon)
 const inputValue = ref<string>(props.value)
+
+const formatTime = (date: number | Date) => {
+  const time = new Date(date)
+  const year = time.getFullYear()
+  const mon =
+    time.getMonth() + 1 < 10 ? `0${time.getMonth() + 1}` : time.getMonth() + 1
+  const data = time.getDate() < 10 ? `0${time.getDate()}` : time.getDate()
+  const hour = time.getHours() < 10 ? `0${time.getHours()}` : time.getHours()
+  const min =
+    time.getMinutes() < 10 ? `0${time.getMinutes()}` : time.getMinutes()
+  const seon =
+    time.getSeconds() < 10 ? `0${time.getSeconds()}` : time.getSeconds()
+
+  const newDate = `${year}-${mon}-${data} ${hour}:${min}:${seon}`
+  return newDate
+}
+
 const changeTab = (val: { index: number }) => {
   current.value = val.index
 }
@@ -213,12 +230,12 @@ onMounted(() => {
   cloneCoupons.value = cloneDeep(props.coupons)
   cloneDisableCoupons.value = cloneDeep(props.disabledCoupons)
   cloneCoupons.value.forEach((item: CouponItem) => {
-    item.startTime = dayjs(item.startAt).format('YYYY.MM.DD')
-    item.endTime = dayjs(item.endAt).format('YYYY.MM.DD')
+    item.startTime = formatTime(item.startAt as number)
+    item.endTime = formatTime(item.endAt as number)
   })
   cloneDisableCoupons.value.forEach((item: CouponItem) => {
-    item.startTime = dayjs(item.startAt).format('YYYY.MM.DD')
-    item.endTime = dayjs(item.endAt).format('YYYY.MM.DD')
+    item.startTime = formatTime(item.startAt as number)
+    item.endTime = formatTime(item.endAt as number)
   })
 })
 const tabs = computed(() => {

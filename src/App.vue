@@ -14,6 +14,9 @@ onHide(() => {
 uni-button::after {
   content: none !important;
 }
+uni-view {
+  box-sizing: border-box;
+}
 page {
   margin: 0;
   padding: 0;

@@ -39,8 +39,8 @@ const props = withDefaults(
     buttonColor?: string
     currency?: string
     decimalLength?: string | number
-    disabled: boolean
-    loading: boolean
+    disabled?: boolean
+    loading?: boolean
   }>(),
   {
     label: '合计',

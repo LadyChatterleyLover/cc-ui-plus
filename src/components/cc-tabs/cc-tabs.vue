@@ -3,12 +3,14 @@
     <scroll-view
       :scroll-x="scrollable"
       :scroll-left="scrollLeft"
+      :scroll-into-view="currentId"
       scroll-with-animation
       @scroll="handleScroll"
     >
       <view class="cc-tabs-wrap">
         <view
           v-for="(item, index) in list"
+          :id="`cc-tabs-content-${index}`"
           :key="index"
           class="cc-tabs-content"
           @click="clickItem(item, index)"
@@ -44,7 +46,7 @@
 </template>
 
 <script setup lang="ts">
-import { getCurrentInstance, onMounted, ref } from 'vue'
+import { getCurrentInstance, nextTick, onMounted, ref } from 'vue'
 export interface TabItem {
   name: string
   disabled?: boolean
@@ -52,6 +54,7 @@ export interface TabItem {
   dot?: boolean
 }
 const instance = getCurrentInstance()
+const currentId = ref('cc-tabs-content-0')
 
 const props = withDefaults(
   defineProps<{
@@ -109,23 +112,39 @@ const clickItem = (item: TabItem, index: number) => {
   if (item.disabled) {
     return
   }
-  active.value = index
-  uni
-    .createSelectorQuery()
-    .in(instance)
-    .selectAll('.cc-tabs-content')
-    .boundingClientRect()
-    .exec((res) => {
-      const width = res[0][active.value].width
-      const offsetLeft = res[0][active.value].left
-      const left = offsetLeft - (width - Number(props.lineWidth)) / 2
-      scrollLeft.value = left < 0 ? 0 : left
-      translateX.value =
-        res[0][active.value].left +
-        res[0][active.value].width / 2 -
-        Number(props.lineWidth) / 2 +
-        scrollX.value
-    })
+  currentId.value = `cc-tabs-content-${index}`
+  nextTick(() => {
+    uni
+      .createSelectorQuery()
+      .in(instance)
+      .selectAll('.cc-tabs-content')
+      .boundingClientRect()
+      .exec((res) => {
+        const width = res[0][index].width
+        const offsetLeft = res[0][index].left
+        const left = offsetLeft + (width - Number(props.lineWidth)) / 2
+        if (index >= active.value) {
+          for (let i = active.value; i < index - 1; i++) {
+            translateX.value += res[0][i].width
+          }
+          translateX.value += res[0][active.value].width / 2
+          translateX.value += res[0][index].width / 2
+          scrollLeft.value = left
+          console.log('translateX', translateX.value)
+        } else {
+          for (let i = index; i < active.value - 1; i++) {
+            translateX.value -= res[0][i].width
+          }
+          translateX.value -= res[0][active.value].width / 2
+          translateX.value -= res[0][index].width / 2
+          scrollLeft.value = -left
+          console.log('translateX', translateX.value)
+        }
+      })
+  })
+  setTimeout(() => {
+    active.value = index
+  }, 50)
   emits('change', {
     item,
     index,
@@ -133,7 +152,9 @@ const clickItem = (item: TabItem, index: number) => {
 }
 
 onMounted(() => {
-  setPosition()
+  nextTick(() => {
+    setPosition()
+  })
 })
 </script>
 
@@ -147,6 +168,8 @@ scroll-view ::v-deep ::-webkit-scrollbar {
 }
 .cc-tabs {
   position: relative;
+  width: 100%;
+  box-sizing: border-box;
   &-wrap {
     flex: 1;
     display: flex;

@@ -3,9 +3,7 @@
     <view>
       <view class="title">基础用法</view>
       <view class="item">
-        <view>
-          <cc-tabs v-model="value" :list="list1" />
-        </view>
+        <cc-tabs v-model="value" :list="list1" />
       </view>
     </view>
 
@@ -63,14 +61,24 @@ const list1 = [
   {
     name: '推荐',
   },
+]
+const list2 = [
+  {
+    name: '关注',
+  },
+  {
+    name: '推荐',
+  },
   {
     name: '电影',
+    disabled: true,
   },
   {
     name: '科技',
   },
   {
     name: '音乐',
+    disabled: true,
   },
   {
     name: '美食',
@@ -84,8 +92,6 @@ const list1 = [
   {
     name: '手工',
   },
-]
-const list2 = [
   {
     name: '关注',
   },
@@ -158,5 +164,6 @@ const list3 = [
   flex-wrap: wrap;
   align-items: center;
   margin: 20rpx;
+  width: 100%;
 }
 </style>
